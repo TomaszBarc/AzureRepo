@@ -14,6 +14,11 @@ Connect-AzAccount
 4. Disconnect PowerShell from Azure:
 Disonnect-AzAccount
 
+
+#Problems with installation of Azure Modules, please follow:
+install-Module PowerShellGet -Repository PSGallery -Force
+install-Module Az.Storage -Repository PSGallery -RequiredVersion 1.9.1-preview -AllowPrerelease -AllowClobber -Force
+
 ----------------------------------------------------------------------------
 
 # Getting help with the commands
@@ -141,4 +146,15 @@ https://docs.microsoft.com/en-gb/azure/cost-management-billing/costs/get-started
 
 #Logs ans nalytics queries:
 https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal
+
+#Storage sequre file transfer:
+https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer
+
+#Azure Files identity-based authentication support for SMB access:
+https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
+
+
+
+#General info about Azure for admins:
+https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
 
