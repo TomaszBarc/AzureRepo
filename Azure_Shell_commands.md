@@ -136,10 +136,10 @@ az storage blob upload --container-name cont1 --account-name tbstr01 --sas-token
 
 # Useful links
 
-#Keybard typing lessons:  
+#Keyboard typing lessons:  
 https://www.typing.com/student/lessons
 
-#azure cost management:  
+#Azure cost management:  
 https://docs.microsoft.com/en-gb/azure/cost-management-billing/costs/get-started-partners
 
 #Logs ans nalytics queries:  
@@ -150,7 +150,6 @@ https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-tra
 
 #Azure Files identity-based authentication support for SMB access:  
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
-
 
 
 #General info about Azure for admins:  
