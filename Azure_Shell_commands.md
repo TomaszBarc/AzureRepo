@@ -3,19 +3,20 @@
 1. Install Azure module for PowerShell:
 Install-Module -Name Az -AllowClobber
 
-2. Allow script execution:  https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7
+2. Allow script execution:  
+https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine
 
-3. Connect PowerShell to Azure account:
+3. Connect PowerShell to Azure account:  
 Connect-AzAccount
 
 #..do the job
 
-4. Disconnect PowerShell from Azure:
+4. Disconnect PowerShell from Azure:  
 Disonnect-AzAccount
 
 
-#Problems with installation of Azure Modules, please follow:
+#Problems with installation of Azure Modules, please follow:  
 install-Module PowerShellGet -Repository PSGallery -Force
 install-Module Az.Storage -Repository PSGallery -RequiredVersion 1.9.1-preview -AllowPrerelease -AllowClobber -Force
 
