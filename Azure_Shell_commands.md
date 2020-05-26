@@ -17,7 +17,7 @@ Disonnect-AzAccount
 
 
 #Problems with installation of Azure Modules, please follow:  
-install-Module PowerShellGet -Repository PSGallery -Force
+install-Module PowerShellGet -Repository PSGallery -Force  
 install-Module Az.Storage -Repository PSGallery -RequiredVersion 1.9.1-preview -AllowPrerelease -AllowClobber -Force
 
 ----------------------------------------------------------------------------
