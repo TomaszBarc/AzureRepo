@@ -26,15 +26,14 @@ install-Module Az.Storage -Repository PSGallery -RequiredVersion 1.9.1-preview -
 
 Get-Help <commandlet>
 
-Example for getting help for the Cmdlet New-AzStorage:
-
+Example for getting help for the Cmdlet New-AzStorage:  
 Get-Help New-AzStorage
 
 ----------------------------------------------------------------------------
 
 # Resource Group Management
 
-#Loop example for removing all resource groups from subscription:
+#Loop example for removing all resource groups from subscription:  
 $rg = Get-AzResourceGroup
 foreach ($g in $rg)
 >> {
@@ -42,16 +41,16 @@ foreach ($g in $rg)
 >> }
 
 
-#Create new resourcegroup:
+#Create new resourcegroup:  
 New-AzResourceGroup -Name mihail -Location 'East US'
 
-#remove resourcegroup:
+#remove resourcegroup:  
 Remove-AzResourceGroup -Name tom
 
-#Lock the resource group to protect against deleting (LockLevel can be also read-only):
+#Lock the resource group to protect against deleting (LockLevel can be also read-only):  
 New-AzResourceLock -LockLevel CanNotDelete -LockName tomtom -ResourceGroupName mihail
 
-#Remove lock:
+#Remove lock:  
 #Create variable for lock ID and removes it:
 $dr =(Get-AzResourceLock -ResourceGroupName mihail).lockid
 Remove-AzResourceLock -LockId $dr
@@ -60,28 +59,27 @@ Remove-AzResourceLock -LockId $dr
 
 # Enablling monitoring of resource 
 
-#Create variable $sa, that contains the ID of the storage account, where logs will be kept:
+#Create variable $sa, that contains the ID of the storage account, where logs will be kept:  
 $sa = (Get-AzStorageAccount -StorageAccountName bigdatastoragezb -ResourceGroupName Az104).id
 
-#Create variable $resource, that contais the ID of the resource we want to apply monitoring to:
+#Create variable $resource, that contais the ID of the resource we want to apply monitoring to:  
 $resource =(Get-AzResource -Name frenchpress -ResourceGroupName Az104 -ResourceType Microsoft.Network/loadBalancers).id
 
-#Enabling monitoring of the resource:
+#Enabling monitoring of the resource:  
 Set-AzDiagnosticSetting -ResourceId $resource -StorageAccountId $sa -Enabled $true
 
 ----------------------------------------------------------------------------
 
 # Resource tagging
 
-#Tag resource group:
+#Tag resource group:  
 Set-AzResourceGroup -name lesson29 -Tag @{ Zip='zap'; Tag1='Value1' }
 
-Tagging all resources in resource group:
-
+Tagging all resources in resource group:  
 $group =Get-AzResourceGroup -Name lesson29
 Get-AzResource -ResourceGroupName $group.ResourceGroupName | ForEach-Object {Set-AzResource -ResourceId $_.Resourceid -Tag $group.Tags -Force}
 
-#Tag all resources from all resource groups (Resource group has to have a tag prior to fdo it):
+#Tag all resources from all resource groups (Resource group has to have a tag prior to fdo it):  
 
 $group =Get-AzResourceGroup
 foreach ($g in $group)
