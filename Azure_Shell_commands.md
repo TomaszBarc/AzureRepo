@@ -75,12 +75,11 @@ Set-AzDiagnosticSetting -ResourceId $resource -StorageAccountId $sa -Enabled $tr
 #Tag resource group:  
 Set-AzResourceGroup -name lesson29 -Tag @{ Zip='zap'; Tag1='Value1' }
 
-Tagging all resources in resource group:  
+#Tagging all resources in resource group:  
 $group =Get-AzResourceGroup -Name lesson29
 Get-AzResource -ResourceGroupName $group.ResourceGroupName | ForEach-Object {Set-AzResource -ResourceId $_.Resourceid -Tag $group.Tags -Force}
 
 #Tag all resources from all resource groups (Resource group has to have a tag prior to fdo it):  
-
 $group =Get-AzResourceGroup
 foreach ($g in $group)
 >> {
@@ -91,26 +90,26 @@ foreach ($g in $group)
 
 # Moving resource from one Resource Group to another
 
-#Create variable for resource:
+#Create variable for resource:  
 $tomove = Get-AzResource -ResourceGroupName tomtom -ResourceName servertomove
 
-#Move resource to another group using resourceId:
+#Move resource to another group using resourceId:  
 Move-AzResource -DestinationResourceGroupName mihail -ResourceId $tomove.ResourceId
 
 ----------------------------------------------------------------------------
 
 # Policy assignment via PowerShell
 
-#Create a variable for the resourcegroup:
+#Create a variable for the resourcegroup:  
 $group = Get-AzResourceGroup -Name lesson29
 
-#Create variable for PolicyDefinition, with specified policy display name:
+#Create variable for PolicyDefinition, with specified policy display name:  
 $definition =Get-AzPolicyDefinition | Where-Object {$_.Properties.displayname -eq 'Allowed locations our policy' }
 
-#Assign policy:
+#Assign policy:  
 New-AzPolicyAssignment -Name locationpermited -DisplayName locationallow  -Scope $group.Resourceid -PolicyDefinition $definition 
 
-#For specific location use comand below:
+#For specific location use comand below:  
 New-AzPolicyAssignment -Name locationpermited -DisplayName locationallow  -Scope $group.Resourceid -PolicyDefinition $definition  -Listofallowedlocation 'central us'
 
 ----------------------------------------------------------------------------
@@ -137,23 +136,23 @@ az storage blob upload --container-name cont1 --account-name tbstr01 --sas-token
 
 # Useful links
 
-#Keybard typing lessons:
+#Keybard typing lessons:  
 https://www.typing.com/student/lessons
 
-#azure cost management:
+#azure cost management:  
 https://docs.microsoft.com/en-gb/azure/cost-management-billing/costs/get-started-partners
 
-#Logs ans nalytics queries:
+#Logs ans nalytics queries:  
 https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal
 
-#Storage sequre file transfer:
+#Storage sequre file transfer:  
 https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer
 
-#Azure Files identity-based authentication support for SMB access:
+#Azure Files identity-based authentication support for SMB access:  
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
 
 
 
-#General info about Azure for admins:
+#General info about Azure for admins:  
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
 
