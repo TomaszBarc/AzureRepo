@@ -65,7 +65,7 @@ $sa = (Get-AzStorageAccount -StorageAccountName bigdatastoragezb -ResourceGroupN
 #Create variable $resource, that contais the ID of the resource we want to apply monitoring to:  
 $resource =(Get-AzResource -Name frenchpress -ResourceGroupName Az104 -ResourceType Microsoft.Network/loadBalancers).id
 
-#Enabling monitoring of the resource:  
+#Enabling monitoring of the resource:
 Set-AzDiagnosticSetting -ResourceId $resource -StorageAccountId $sa -Enabled $true
 
 ----------------------------------------------------------------------------
