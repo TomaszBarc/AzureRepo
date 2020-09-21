@@ -142,7 +142,7 @@ https://www.typing.com/student/lessons
 #Azure cost management:  
 https://docs.microsoft.com/en-gb/azure/cost-management-billing/costs/get-started-partners
 
-#Logs ans nalytics queries:  
+#Logs and analytics queries:  
 https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal
 
 #Storage sequre file transfer:  
@@ -151,7 +151,8 @@ https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-tra
 #Azure Files identity-based authentication support for SMB access:  
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
 
-
 #General info about Azure for admins:  
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
 
+#Good lessons on YT:
+https://www.youtube.com/channel/UCdmEIMC3LBil4o0tjaTbj0w
