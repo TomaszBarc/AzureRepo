@@ -154,5 +154,5 @@ https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-direct
 #General info about Azure for admins:  
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview
 
-#Good lessons on YT:
+#Good lessons on YT:  
 https://www.youtube.com/channel/UCdmEIMC3LBil4o0tjaTbj0w
