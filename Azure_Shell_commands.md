@@ -145,7 +145,7 @@ https://docs.microsoft.com/en-gb/azure/cost-management-billing/costs/get-started
 #Logs and analytics queries:  
 https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal
 
-#Storage sequre file transfer:  
+#Storage secure file transfer:  
 https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer
 
 #Azure Files identity-based authentication support for SMB access:  
